@@ -1,0 +1,87 @@
+:root{
+    --clr-primary-light : #48cae4;
+    --clr-primary-main : #0096c7;
+    --clr-primary-dark : #03045e;
+    --max-width : 70rem;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background : rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem 0;
+}
+.brand{
+    user-select: none;
+
+}
+.brand-name{
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(bottom right,var(--clr-primary-dark), var(--clr-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.brand p {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;   
+    font-size: .8rem;
+    color: #afafaf;
+}
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.links a {
+    margin: 0 1rem;
+    position: relative;
+}
+.links a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    bottom: -.2rem;
+    left: 0;
+    background-color: var(--clr-primary-main);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s;
+}
+
+.links a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.link-sign-up{
+    transition: background .5s;
+    padding: .5rem 1rem;
+    border: .5px solid var(--clr-primary-main);
+    border-radius: 10px;
+}
+.link-sign-up:hover{
+    background-color: var(--clr-primary-main);
+    color: white;
+}
+.link-sign-in{
+    transition: color .5s;
+    padding: .5rem 1rem;
+}
+.link-sign-in:hover{
+    color: var(--clr-primary-main);
+}
