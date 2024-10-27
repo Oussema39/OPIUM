@@ -24,23 +24,20 @@ Follow these steps to set up OPIUM on your local machine:
 
 ### Step 1: Clone the Repository
 
-    ```bash
     git clone https://github.com/your-username/opium.git
     cd opium
 
 ### Step 2: Install Dependencies
 
-    ```bash
+
     composer install
     npm install
     
 ### Step 3: Configure the Environment
 
-    ```bash
     cp .env.example .env
 Update the .env file with your database credentials and other configurations:
 
-    ```bash
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
@@ -50,32 +47,26 @@ Update the .env file with your database credentials and other configurations:
 
 ### Step 1: Clone the Repository
 
-    ```bash
     git clone https://github.com/your-username/opium.git
     cd opium
 ### Step 4: Generate Application Key
 
-    ```bash
     php artisan key:generate
 
 ### Step 5: Migrate the Database
 
-    ```bash
     php artisan migrate
 
 ### Step 6: Seed the Database (Optional)
 
-    ```bash
     php artisan db:seed
 
 ### Step 7: Compile Assets
 
-    ```bash
     npm run dev
 
 ### Step 8: Serve the Application
 
-    ```bash
     php artisan serve
 
 Your app will be accessible at http://127.0.0.1:8000
